@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITY 6 & 7</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+
+        .login-page{
+            min-height:100vh;
+            background-image:url("https://media.tenor.com/B1hgrTzt3osAAAAe/take-note.png");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        form{
+            width:300px;
+            padding:20px;
+            background:rgb(245,245,255);
+            border:2px solid #727387;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:rgb(255,47,0);
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:rgb(238,42,3);
+        }
+
+
+        .pagination-page{
+            min-height:100vh;
+            background-image:url("https://i.pinimg.com/736x/46/2c/d7/462cd7b7c5e3fd2738f520e222291fbd.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+
+            display:none;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
+        h1, h2{
+            color:white;
+            margin:10px;
+        }
+
+        .content{
+            text-align:center;
+            margin-top:20px;
+        }
+
+        .link-btn{
+            display:block;
+            width:200px;
+            margin:10px auto;
+            padding:12px;
+            text-decoration:none;
+            background:white;
+            color:black;
+            border-radius:5px;
+            text-align:center;
+        }
+
+        .link-btn:hover{
+            background:black;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="login-page" id="loginPage">
+
+        <form id="loginForm">
+
+            <h2>Login</h2>
+
+            <label>Username</label>
+            <input type="text" placeholder="Enter Username" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" required>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+    </div>
+
+    <div class="pagination-page" id="paginationPage">
+
+        <h1>PAGINATION</h1>
+        <h2>Activities 2 - 5!</h2>
+
+        <div class="content">
+
+            <a href="ACT2.html" class="link-btn">
+                Activity 2
+            </a>
+
+            <a href="ACT3.html" class="link-btn">
+                Activity 3
+            </a>
+
+            <a href="ACT4.html" class="link-btn">
+                Activity 4
+            </a>
+
+            <a href="ACT5.html" class="link-btn">
+                Activity 5
+            </a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const loginForm = document.getElementById("loginForm");
+        const loginPage = document.getElementById("loginPage");
+        const paginationPage = document.getElementById("paginationPage");
+
+        loginForm.addEventListener("submit", function(event){
+
+            event.preventDefault();
+
+            loginPage.style.display = "none";
+            paginationPage.style.display = "flex";
+
+        });
+
+    </script>
+
+</body>
+</html>
